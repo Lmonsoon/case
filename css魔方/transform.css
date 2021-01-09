@@ -1,0 +1,87 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	perspective: 800px;
+	}
+.app{
+	width: 200px;
+	height: 200px;
+	transform-style: preserve-3d;
+	animation: cuube 5s infinite;
+	  
+}
+.cude{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 200px;
+	/*background-color: red; */
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	opacity: 0.8;
+}
+.cude1{
+	
+	transform: translateZ(100px);
+}
+.cude1 .block{
+	background-color: yellow;
+}
+.cude2{
+	transform: translateZ(-100px);
+}
+.cude2 .block{
+	background-color: orangered;
+}
+.cude3{
+	/* background-color: white; */
+	transform: translateX(100px) rotateY(90deg);
+}
+.cude3 .block{
+	background-color: darkcyan;
+}
+.cude4{
+	/* background-color: green; */
+	transform: translateX(-100px) rotateY(90deg);
+}
+.cude4 .block{
+	background-color: green;
+}
+.cude5{
+	transform: translateY(-100px) rotateX(90deg);
+}
+.cude5 .block{
+	background-color: red;
+}
+.cude6{
+	transform: translateY(100px) rotateX(90deg);
+}
+.cude5 .block{
+	
+}
+.block{
+	border: 1px solid black;
+	border-radius: 7px;
+}
+@keyframes cuube {
+	0% {
+	    transform:rotate3d(0) ;
+	    }
+	
+	
+	    100%{
+	    transform: rotate3d(1, -1, 1, 360deg);
+	    }
+}
+
+}
