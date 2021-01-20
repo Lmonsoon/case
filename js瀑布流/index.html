@@ -18,6 +18,10 @@
 			position: absolute;
 		
 		}
+		.item img{
+			width: 100%;
+			height: 100%;
+		}
 		
 	</style>
 </head>
@@ -69,8 +73,9 @@
 			let arr=[];
 			let minHeight=0;
 			let index
-			itemlist[0].style.width=itemWidth;
+			
 			for(let i=0;i < itemlist.length;i++){
+				itemlist[i].style.width=`${itemWidth}PX`;
 				let height=itemlist[i].offsetHeight;
 				if(i<columns){
 					itemlist[i].style.top="0";
@@ -103,6 +108,7 @@
 		    window.onresize = function() {
 		        //重新定义瀑布流
 		        waterfall();
+				console.log('win')
 		    };
 		//载入网页时执行
 		window.onload=function(){
